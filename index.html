@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circuit Analysis Master - Estudia y Practica</title>
+    <meta name="description" content="Aprende análisis de circuitos paso a paso con ejercicios interactivos de mallas, nodos, Thevenin y transitorios.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CircuitMaster AI</div>
+        <button class="btn btn-secondary" id="btn-home">Inicio</button>
+    </header>
+
+    <main class="container">
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="fade-in">
+            <h1 style="margin-bottom: 2rem; font-size: 2.5rem; text-align: center;">¿Qué quieres practicar hoy?</h1>
+            <div class="dashboard-grid">
+                <div class="topic-card" onclick="app.startTopic('mallas')">
+                    <div class="topic-icon">🌀</div>
+                    <div class="topic-title">Análisis de Mallas</div>
+                    <p>Resuelve circuitos usando las leyes de voltajes de Kirchhoff en lazos cerrados.</p>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-mallas"></div></div>
+                    <button class="btn">Empezar</button>
+                </div>
+
+                <div class="topic-card" onclick="app.startTopic('nodos')">
+                    <div class="topic-icon">📍</div>
+                    <div class="topic-title">Análisis de Nodos</div>
+                    <p>Domina las leyes de corrientes de Kirchhoff para encontrar potenciales de nodo.</p>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-nodos"></div></div>
+                    <button class="btn">Empezar</button>
+                </div>
+
+                <div class="topic-card" onclick="app.startTopic('thevenin')">
+                    <div class="topic-icon">🔋</div>
+                    <div class="topic-title">Teorema de Thévenin</div>
+                    <p>Simplifica circuitos complejos a una fuente de voltaje y una resistencia en serie.</p>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-thevenin"></div></div>
+                    <button class="btn">Empezar</button>
+                </div>
+
+                <div class="topic-card" onclick="app.startTopic('inductors')">
+                    <div class="topic-icon">➰</div>
+                    <div class="topic-title">Inductancia (Transitorios)</div>
+                    <p>Estudia el comportamiento de carga y descarga en circuitos RL.</p>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-inductors"></div></div>
+                    <button class="btn">Empezar</button>
+                </div>
+
+                <div class="topic-card" onclick="app.startTopic('capacitors')">
+                    <div class="topic-icon">⏸</div>
+                    <div class="topic-title">Capacitancia (Transitorios)</div>
+                    <p>Analiza el almacenamiento de energía en circuitos RC paso a paso.</p>
+                    <div class="progress-bar"><div class="progress-fill" id="progress-capacitors"></div></div>
+                    <button class="btn">Empezar</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Exercise Player Section -->
+        <section id="exercise-player" class="exercise-container fade-in">
+            <div class="exercise-header">
+                <h2 id="exercise-title">Título del Ejercicio</h2>
+                <div id="exercise-meta" style="color: var(--text-secondary);">Ejercicio 1 de 3</div>
+            </div>
+
+            <div class="circuit-display" id="circuit-container">
+                <!-- Image will be injected here -->
+            </div>
+
+            <div class="problem-statement">
+                <h3>Problema:</h3>
+                <p id="problem-text">Cargando problema...</p>
+            </div>
+
+            <div class="steps-container" id="steps-list">
+                <!-- Steps will be injected here -->
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-secondary" id="btn-reset">Reiniciar</button>
+                <button class="btn" id="btn-next-step">Siguiente Paso</button>
+                <button class="btn" id="btn-final-answer" style="background-color: var(--secondary-color); display: none;">Ver Respuesta Final</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
