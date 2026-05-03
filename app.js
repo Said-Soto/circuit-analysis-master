@@ -18,7 +18,19 @@ const app = {
             },
             {
                 title: "Mallas: Ejercicio 2 (Tres Mallas)",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Circuito+3+Mallas+(Pronto)",
+                svg: `<svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="30" width="100" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <rect x="150" y="30" width="100" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <rect x="250" y="30" width="100" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <circle cx="50" cy="70" r="10" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <text x="45" y="75" font-size="12">+</text>
+                    <text x="45" y="85" font-size="12">-</text>
+                    <text x="25" y="75" font-size="10">10V</text>
+                    <rect x="190" y="30" width="20" height="10" fill="#fff" stroke="#000"/>
+                    <text x="195" y="25" font-size="10">5Ω</text>
+                    <circle cx="350" cy="70" r="10" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <text x="365" y="75" font-size="10">5V</text>
+                </svg>`,
                 problem: "Un circuito con 3 lazos. M1 tiene 10V, M2 tiene una R de 5Ω compartida, M3 tiene 5V. Encuentre i1, i2, i3.",
                 steps: [
                     { desc: "Ecuaciones", content: "Malla 1: 10i1 - 5i2 = 10\nMalla 2: -5i1 + 15i2 - 5i3 = 0\nMalla 3: -5i2 + 10i3 = -5", formula: "Sistema 3x3" },
@@ -28,7 +40,19 @@ const app = {
             },
             {
                 title: "Mallas: Ejercicio 3 (Supermalla)",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Supermalla",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="30" width="200" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <line x1="150" y1="30" x2="150" y2="110" stroke="#000" stroke-width="2"/>
+                    <circle cx="150" cy="70" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <line x1="150" y1="60" x2="150" y2="80" stroke="#000" stroke-width="2" marker-end="url(#arrow)"/>
+                    <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#000"/></marker></defs>
+                    <text x="170" y="75" font-size="12">2A</text>
+                    <text x="40" y="75" font-size="12">20V</text>
+                    <rect x="90" y="30" width="20" height="10" fill="#fff" stroke="#000"/>
+                    <text x="95" y="25" font-size="10">5Ω</text>
+                    <rect x="190" y="30" width="20" height="10" fill="#fff" stroke="#000"/>
+                    <text x="195" y="25" font-size="10">10Ω</text>
+                </svg>`,
                 problem: "Encuentre las corrientes cuando hay una fuente de corriente de 2A entre dos mallas.",
                 steps: [
                     { desc: "Relación", content: "i2 - i1 = 2A", formula: "Ecuación de restricción" },
@@ -52,7 +76,20 @@ const app = {
             },
             {
                 title: "Nodos: Ejercicio 2 (Supernodo)",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Supernodo",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="50" y1="120" x2="250" y2="120" stroke="#000" stroke-width="2"/>
+                    <circle cx="150" cy="40" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <text x="142" y="45" font-size="12">+ -</text>
+                    <text x="145" y="25" font-size="10">10V</text>
+                    <line x1="50" y1="40" x2="135" y2="40" stroke="#000" stroke-width="2"/>
+                    <line x1="165" y1="40" x2="250" y2="40" stroke="#000" stroke-width="2"/>
+                    <rect x="45" y="70" width="10" height="20" fill="#fff" stroke="#000"/>
+                    <line x1="50" y1="40" x2="50" y2="120" stroke="#000" stroke-width="2"/>
+                    <rect x="245" y="70" width="10" height="20" fill="#fff" stroke="#000"/>
+                    <line x1="250" y1="40" x2="250" y2="120" stroke="#000" stroke-width="2"/>
+                    <text x="30" y="45" font-size="12">Va</text>
+                    <text x="260" y="45" font-size="12">Vb</text>
+                </svg>`,
                 problem: "Dos nodos conectados por una fuente de voltaje de 10V. Halle Va y Vb.",
                 steps: [
                     { desc: "Relación", content: "Va - Vb = 10", formula: "Ecuación de voltaje" },
@@ -63,7 +100,14 @@ const app = {
             },
             {
                 title: "Nodos: Ejercicio 3 (3 Nodos)",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=3+Nodos",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="50" y1="120" x2="250" y2="120" stroke="#000" stroke-width="2"/>
+                    <line x1="50" y1="40" x2="250" y2="40" stroke="#000" stroke-width="2"/>
+                    <line x1="150" y1="40" x2="150" y2="120" stroke="#000" stroke-width="2"/>
+                    <text x="45" y="35" font-size="10">V1</text>
+                    <text x="145" y="35" font-size="10">V2</text>
+                    <text x="245" y="35" font-size="10">V3</text>
+                </svg>`,
                 problem: "Halle V1, V2, V3 en una red de 4 resistencias y 2 fuentes.",
                 steps: [
                     { desc: "Planteamiento", content: "3 ecuaciones de nodo.", formula: "Matriz G * V = I" },
@@ -85,7 +129,15 @@ const app = {
             },
             {
                 title: "Thévenin: Ejercicio 2",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Thevenin+Ex2",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="150" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <line x1="200" y1="40" x2="250" y2="40" stroke="#000" stroke-width="2"/>
+                    <line x1="200" y1="120" x2="250" y2="120" stroke="#000" stroke-width="2"/>
+                    <text x="255" y="45" font-size="12">A</text>
+                    <text x="255" y="125" font-size="12">B</text>
+                    <circle cx="50" cy="80" r="10" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <text x="25" y="85" font-size="10">10V</text>
+                </svg>`,
                 problem: "Circuito con fuente de 10V y 3 resistencias en serie-paralelo.",
                 steps: [
                     { desc: "Vth", content: "Divisor de voltaje.", formula: "Vth = 5V" },
@@ -95,7 +147,15 @@ const app = {
             },
             {
                 title: "Thévenin: Ejercicio 3",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Thevenin+Ex3",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="150" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="15" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <text x="25" y="85" font-size="10">2A</text>
+                    <line x1="200" y1="40" x2="250" y2="40" stroke="#000" stroke-width="2"/>
+                    <line x1="200" y1="120" x2="250" y2="120" stroke="#000" stroke-width="2"/>
+                    <text x="255" y="45" font-size="12">A</text>
+                    <text x="255" y="125" font-size="12">B</text>
+                </svg>`,
                 problem: "Circuito con fuente de corriente.",
                 steps: [
                     { desc: "Vth", content: "Ley de Ohm.", formula: "Vth = I * R" },
@@ -117,7 +177,13 @@ const app = {
             },
             {
                 title: "Inductancia: Descarga RL",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Descarga+RL",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="200" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <path d="M 150 40 Q 160 20 170 40 Q 180 60 190 40" fill="none" stroke="#000" stroke-width="2"/>
+                    <text x="165" y="20" font-size="10">L</text>
+                    <rect x="80" y="35" width="20" height="10" fill="#fff" stroke="#000"/>
+                    <text x="85" y="30" font-size="10">R</text>
+                </svg>`,
                 problem: "Inductor cargado con 5A se descarga a través de R=10Ω.",
                 steps: [
                     { desc: "Ecuación", content: "i(t) = Io * e^(-Rt/L)", formula: "i(t) = 5e^(-1000t)" }
@@ -126,7 +192,11 @@ const app = {
             },
             {
                 title: "Inductancia: Cambio de estado",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Transitorio+Complejo",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="100" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <rect x="150" y="40" width="100" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <text x="190" y="35" font-size="10">L</text>
+                </svg>`,
                 problem: "Dos resistencias en el transitorio.",
                 steps: [
                     { desc: "Análisis", content: "Calcular R equivalente durante t>0.", formula: "Req = 15Ω" },
@@ -148,7 +218,12 @@ const app = {
             },
             {
                 title: "Capacitancia: Descarga RC",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Descarga+RC",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="200" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <line x1="145" y1="30" x2="145" y2="50" stroke="#000" stroke-width="4"/>
+                    <line x1="155" y1="30" x2="155" y2="50" stroke="#000" stroke-width="4"/>
+                    <text x="145" y="20" font-size="10">C</text>
+                </svg>`,
                 problem: "Capacitor con 50V se descarga en R=2k.",
                 steps: [
                     { desc: "Ecuación", content: "v(t) = Vo * e^(-t/RC)", formula: "v(t) = 50e^-5t" }
@@ -157,7 +232,11 @@ const app = {
             },
             {
                 title: "Capacitancia: Energía",
-                image: "https://via.placeholder.com/600x300/ffffff/000000?text=Energia+C",
+                svg: `<svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="50" y="40" width="100" height="80" fill="none" stroke="#000" stroke-width="2"/>
+                    <circle cx="50" cy="80" r="10" fill="#fff" stroke="#000" stroke-width="2"/>
+                    <line x1="150" y1="40" x2="150" y2="120" stroke="#000" stroke-width="2"/>
+                </svg>`,
                 problem: "Calcule la energía almacenada al final de la carga.",
                 steps: [
                     { desc: "Fórmula", content: "W = 1/2 * C * V^2", formula: "W = 0.5 * 100u * 20^2" },
@@ -214,7 +293,13 @@ const app = {
         document.getElementById('exercise-title').innerText = exercise.title;
         document.getElementById('exercise-meta').innerText = `Ejercicio ${index + 1} de ${this.data[this.currentTopic].length}`;
         document.getElementById('problem-text').innerText = exercise.problem;
-        document.getElementById('circuit-container').innerHTML = `<img src="${exercise.image}" alt="Circuito" style="max-height: 300px;">`;
+        
+        const container = document.getElementById('circuit-container');
+        if (exercise.svg) {
+            container.innerHTML = exercise.svg;
+        } else {
+            container.innerHTML = `<img src="${exercise.image}" alt="Circuito" style="max-height: 300px;">`;
+        }
         
         document.getElementById('steps-list').innerHTML = '';
         document.getElementById('dashboard').style.display = 'none';
